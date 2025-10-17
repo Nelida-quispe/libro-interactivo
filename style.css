@@ -1,0 +1,57 @@
+/* Fondo general */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: #2d0348; /* Fondo sólido oscuro */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor con fondo de color */
+.container {
+  background: rgba(0, 0, 0, 0.85); /* Fondo semi-transparente */
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  border: 3px solid #ff2ae6; /* Borde verde para resaltar */
+}
+
+/* Imagen superior */
+.top-image {
+  width: 100%;           /* Que ocupe todo el ancho */
+  max-height: 250px;     /* Altura máxima */
+  object-fit: cover;     /* Ajuste para no deformar */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Texto */
+p {
+  font-size: 1.2em;
+}
+
+/* Botones */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  text-decoration: none;
+  background: #90c5f4;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2d0348;
+  color: azure;
+}

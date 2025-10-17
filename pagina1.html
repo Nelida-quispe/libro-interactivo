@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>contexto de la mision</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Imagen superior -->
+    <img src="images/imagen1.jpg" alt="contexto" class="top-image">
+
+    <!-- Texto dinámico de la historia -->
+    <p id="storyText"></p>
+
+    <!-- Botones de decisión -->
+    <div class="buttons">
+      <a href="pagina4.html" class="btn">Acepto la mision</a>
+      <a href="pagina2.html" class="btn">Espere mucho para esta oprtunidad</a>
+    </div>
+  </div>
+
+  <script>
+    // Obtener los parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+
+    // Capturamos nombre y país (el género lo podrías usar después si quieres)
+    const name = params.get("name") || "vi";
+    const country = params.get("country") || "mejor amigo";
+
+    // Personalizar el texto de la historia
+    const storyText = document.getElementById("storyText");
+    storyText.innerHTML = `
+      Hola ${name}.
+      Necesitamos tu ayuda para recuperar una computadora portatil que contiene informacion altamente confidencial y que podria poner en riesgo miles de vidas.    
+      Tu mejor amigo ${country}, fue secuestrado al descubrir que alguien dentro de la corporación planeaba 
+      vender esa informacion al mejor postor y ahora solo tu puedes rastrearlo.
+      El hacker ha escapado con el equipo.  
+      Si no logras recuperarlo antes del amanecer, la información y la vida de tu amigo estarán perdidas.
+      
+      Hay un problema: esta noche tienes una cena crucial con los directivos de tu empresa, una cita que podría garantizarte el ascenso que has estado esperando durante años.  
+      Si decides aceptar la misión, tendrás que abandonar la cena, y con ello, quizás tu futuro profesional.  
+      Pero si no lo haces… perderás algo mucho más valioso.
+
+      ¿Qué harás, ${name}?  
+  
+    `;
+  </script>
+</body>
+</html>
